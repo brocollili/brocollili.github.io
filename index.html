@@ -2,26 +2,3 @@
 layout: home
 # Index page
 ---
-
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  
-  // Khắc phục xung đột cấu trúc thẻ giữa Jekyll (Kramdown) và Mermaid
-  document.addEventListener("DOMContentLoaded", function () {
-    const codeBlocks = document.querySelectorAll('.language-mermaid, code.language-mermaid');
-    codeBlocks.forEach(el => {
-      const code = el.textContent;
-      // Tìm thẻ bao ngoài cùng (thường là thẻ pre) để thay thế
-      const container = el.closest('pre') || el;
-      
-      const newPre = document.createElement('pre');
-      newPre.className = 'mermaid';
-      newPre.textContent = code;
-      
-      container.replaceWith(newPre);
-    });
-    
-    // Khởi tạo và vẽ sơ đồ
-    mermaid.initialize({ startOnLoad: true, theme: 'default' });
-  });
-</script>
