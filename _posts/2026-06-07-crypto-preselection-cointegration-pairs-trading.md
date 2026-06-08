@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pre-selection trong cointegration pairs trading: một case study crypto"
+title: "Pre-selection trong cointegration pairs trading"
 date: 2026-06-07
 categories: [quant, crypto, stat-arb]
 tags: [pairs-trading, cointegration, preselection, mean-reversion, crypto]
@@ -96,7 +96,8 @@ def cointegration_candidates(prices: pd.DataFrame, ranked_pairs: pd.DataFrame) -
 
 ```
 
-Trading logic dùng z-score của spread: vào lệnh khi \(|z| $\ge$ 2\), thoát khi spread quay về 0, stop khi \(|z| $\ge$ 4\), nếu không thì sẽ đóng lệnh sau 336 bar.
+
+Trading logic dùng z-score của spread: vào lệnh khi \(|z|$\ge$2\), thoát khi spread quay về 0, stop khi \(|z|$\ge$4\), nếu không thì sẽ đóng lệnh sau 336 bar.
 
 ## Minh họa thực nghiệm
 
