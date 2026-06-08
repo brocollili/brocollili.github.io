@@ -5,6 +5,7 @@ date: 2026-06-07
 categories: [quant, crypto, stat-arb]
 tags: [pairs-trading, cointegration, preselection, mean-reversion, crypto]
 math: true
+mermaid: true
 ---
 
 Trong pairs trading, câu hỏi đơn giản nhất là: hai tài sản có cointegrated không? Nhưng trong một universe lớn, câu hỏi đó chưa phải điểm bắt đầu. Trước khi chạy cointegration test, ta phải quyết định cặp nào đáng được đưa vào list để kiểm định. Bước này được gọi là pre-selection, và paper *Pre-selection in cointegration-based pairs trading* của Brunetti và De Luca cho thấy nó không chỉ là tối ưu tốc độ tính toán. Metric pre-selection có thể làm thay đổi chính cặp được trade, lợi nhuận, độ biến động của lợi nhuận và cả risk profile.
@@ -96,8 +97,7 @@ def cointegration_candidates(prices: pd.DataFrame, ranked_pairs: pd.DataFrame) -
 
 ```
 
-
-Trading logic dùng z-score của spread: vào lệnh khi \(|z|$\ge$2\), thoát khi spread quay về 0, stop khi \(|z|$\ge$4\), nếu không thì sẽ đóng lệnh sau 336 bar.
+Trading logic dùng z-score của spread: vào lệnh khi $|z| \ge 2$, thoát khi spread quay về 0, stop khi $|z| \ge 4$, nếu không thì sẽ đóng lệnh sau 336 bar.
 
 ## Minh họa thực nghiệm
 
