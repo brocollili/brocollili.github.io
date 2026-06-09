@@ -1,3 +1,11 @@
+---
+title: "An Algorithmic Guide to Ornstein-Uhlenbeck Processes"
+date: 2026-06-10 00:00:00 +0700
+categories: [Quantitative Finance, Stochastic Calculus]
+tags: [ou-process, simulation, parameter-estimation]
+math: true
+mermaid: true
+---
 # Ornstein-Uhlenbeck Processes
 
 _An algorithmic guide from standard Brownian motion to simulation, estimation, and extensions_
